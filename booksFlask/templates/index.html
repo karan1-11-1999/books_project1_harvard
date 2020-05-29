@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+        <br><br><br>
+            <div style="text-align: center;">
+                <h1>Log In</h1>
+                <form action="{{url_for('logIn')}}" method="post">
+                    <br><p>Please enter your user id</p><br>
+                    <input type="text" placeholder="Please enter user id" name="user">
+                    <br><p>Please enter your password</p><br>
+                    <input type="text" placeholder="Please enter password" name="password">
+                    <button>Sign In</button>
+                </form>
+            </div>       
+            <div style="text-align: center;">
+                <a href="/createAccountMain">Create account</a>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+Stuff learned 
+
+0) CD to the workspace
+
+1) Set the environment variable FLASK_APP to be application.py
+
+> export FLASK_APP=application.py    (NO SPACES)
+
+2) Set database url if one has it.
+
+> export DATABASE_URL=<THE URL OF DATABASE> (NO SPACES)
+> export DATABASE_URL=postgres://mtaggjxgqfyrdd:9e96d864017f73d42f4f2e0c3c6a29ea7bb08217e427d781f76eefb0e06eadff@ec2-35-173-94-156.compute-1.amazonaws.com:5432/d1om7llcj5k4j4
+
+
+3) Debug mode on for Flask
+
+> export FLASK_DEBUG=TRUE       (NO SPACES)
+

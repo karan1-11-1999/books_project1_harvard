@@ -1,0 +1,38 @@
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    userid VARCHAR NOT NULL UNIQUE,
+    password VARCHAR NOT NULL,
+    name VARCHAR NOT NULL
+);
+
+CREATE TABLE allratings(
+    id SERIAL PRIMARY KEY,
+    ratings DECIMAL NOT NULL,
+    reviews VARCHAR NOT NULL,
+    userid INTEGER REFERENCES users
+);
+
+CREATE TABLE avgratings(
+    id SERIAL PRIMARY KEY,
+    ratings DECIMAL NOT NULL,
+    reviews VARCHAR NOT NULL,
+    countRatings INTEGER NOT NULL,
+    countReviews INTEGER NOT NULL
+);
+
+CREATE TABLE books(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    ISBN INTEGER NOT NULL,
+    author VARCHAR NOT NULL,
+    allratings_id INTEGER REFERENCES avgratings
+);
+
+ALTER TABLE books
+ADD COLUMN year INTEGER NOT NULL;
+
+ALTER TABLE books
+ALTER isbn TYPE VARCHAR;
+
+ALTER TABLE books
+ALTER ISBN SET NOT NULL;

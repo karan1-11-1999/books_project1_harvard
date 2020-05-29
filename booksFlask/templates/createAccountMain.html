@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Create Account</title>
+</head>
+
+<body>
+    <br><br><br>
+    <div style="text-align: center;">
+        <h1>Create account</h1>
+        <form action="{{url_for('createAccountMain')}}" method="post">
+            <p>Please enter your name</p><br>
+            <input type="text" placeholder="Please enter Name" name="name">
+            <br>
+            <p>Please enter your user id</p><br>
+            <input type="text" placeholder="Please enter user id" name="user">
+            <br>
+            <p>Please enter your password</p><br>
+            <input type="password" placeholder="Please enter password" name="password">
+            <br>
+            <br>
+            <br>
+            <button>Create account</button>
+        </form>
+    </div>
+    <br>
+    <div style="text-align: center;">
+       <a href="/">go back to log in.</a>
+    </div>
+</body>
+
+</html>
